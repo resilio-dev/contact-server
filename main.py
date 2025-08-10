@@ -34,6 +34,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "API FastAPI corriendo..."}
+
+
 @app.post("/contact")
 async def send_email(contact: ContactData, request: Request):
     client_ip = request.client.host
