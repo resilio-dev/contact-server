@@ -1,0 +1,65 @@
+# Ignorar archivos de variables de entorno
+.env
+
+# Ignorar entornos virtuales
+.venv
+env/
+venv/
+ENV/
+.env.bak
+venv.bak/
+
+# Ignorar caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar archivos de compilación y paquetes
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Ignorar archivos de configuración de IDE
+.idea/
+.vscode/
+.cursor/
+rest-client.env.json
+*.DS_Store
+Desktop.ini
+_* 
+Thumbs.db
+
+# Ignorar archivos de logs y temporales
+*.log
+*.lock
+*.tmp
+
+# Ignorar archivos de pruebas y cobertura
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Ignorar archivos de documentación generados
+docs/_build/   
