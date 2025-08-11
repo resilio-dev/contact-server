@@ -49,7 +49,7 @@ async def send_email(contact: ContactData, request: Request):
         t for t in rate_limits[client_ip] if now - t < timedelta(hours=1)
     ]
     if len(rate_limits[client_ip]) >= 5:
-        raise HTTPException(status_code=429, detail="You have exceeded the hourly limit")
+        raise HTTPException(status_code=429, detail="Has excedido el límite de mensajes por hora.")
 
     rate_limits[client_ip].append(now)
 
@@ -71,6 +71,6 @@ async def send_email(contact: ContactData, request: Request):
             )
         if response.status_code >= 400:
             raise Exception(response.text)
-        return {"message": "Message sent successfully"}
+        return {"message": "Mensaje enviado con éxito."}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error sending message: {str(e)}")
